@@ -18,7 +18,9 @@ var plugins = [
 	'@babel/plugin-transform-shorthand-properties',
 	['module-resolver', {
 		alias: {
-			events: '@alexeimyshkouski/espruino-events'
+			events: '@bit/myshkouski.espruino.modules.events',
+			stream: '@bit/myshkouski.espruino.modules.stream',
+			util: '@bit/myshkouski.espruino.modules.util'
 		}
 	}],
 	['module:fast-async', {
@@ -28,7 +30,7 @@ var plugins = [
 	}]
 ]
 
-module.exports = function() {
+module.exports = function () {
 	return {
 		plugins: plugins
 	}
