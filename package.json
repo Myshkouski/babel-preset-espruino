@@ -13,5 +13,5 @@
 		"fast-async": "^6.3.8"
 	},
 	"name": "babel-preset-espruino",
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
