@@ -18,6 +18,7 @@ var plugins = [
 	'@babel/plugin-transform-shorthand-properties',
 	['module-resolver', {
 		alias: {
+			'buffer-from': '@bit/myshkouski.espruino.modules.buffer-from',
 			events: '@bit/myshkouski.espruino.modules.events',
 			stream: '@bit/myshkouski.espruino.modules.stream',
 			util: '@bit/myshkouski.espruino.modules.util'
