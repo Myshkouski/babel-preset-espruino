@@ -17,6 +17,7 @@ var plugins = [
 	'@babel/plugin-transform-parameters',
 	'@babel/plugin-transform-shorthand-properties',
 	['module-resolver', {
+		extensions: ['.js'],
 		alias: {
 			'buffer-from': '@bit/myshkouski.espruino.modules.buffer-from',
 			events: '@bit/myshkouski.espruino.modules.events',
@@ -32,6 +33,7 @@ var plugins = [
 ]
 
 module.exports = function () {
+	console.log(arguments)
 	return {
 		plugins: plugins
 	}
