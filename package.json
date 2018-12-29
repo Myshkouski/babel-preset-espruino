@@ -21,7 +21,7 @@
 	"peerDependencies": {
 		"@bit/myshkouski.espruino.modules.buffer-from": "0.0.2",
 		"@bit/myshkouski.espruino.modules.events": "0.0.2",
-		"@bit/myshkouski.espruino.modules.stream": "0.0.4",
+		"@bit/myshkouski.espruino.modules.stream": "0.0.7",
 		"@bit/myshkouski.espruino.modules.util": "0.0.1"
 	}
 }
