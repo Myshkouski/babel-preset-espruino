@@ -1,8 +1,8 @@
 const babel = require('@babel/core')
-const preset = require('.')
+const espruino = require('.')
 
 const source = `
-    import stream from '@bit/myshkouski.espruino.modules.stream'
+    import stream from 'stream'
 
     const a = () => console.log(this)
 
@@ -12,7 +12,7 @@ const source = `
 const compiled = babel.transformSync(source, {
     filename: 'index.js',
     presets: [
-        preset()
+        espruino()
     ]
 })
 
