@@ -20,10 +20,10 @@ var plugins = [
 	'@babel/plugin-transform-template-literals',
 	['module-resolver', {
 		alias: {
-			'buffer-from': '@bit/myshkouski.espruino.buffer-from',
-			events: '@bit/myshkouski.espruino.events',
-			stream: '@bit/myshkouski.espruino.stream',
-			util: '@bit/myshkouski.espruino.util'
+			'buffer-from': '@alexeimyshkouski/espruino/modules/buffer-from',
+			events: '@alexeimyshkouski/espruino/modules/events',
+			stream: '@alexeimyshkouski/espruino/modules/stream',
+			util: '@alexeimyshkouski/espruino/util'
 		}
 	}],
 	['module:fast-async', {
