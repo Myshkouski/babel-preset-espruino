@@ -1,4 +1,8 @@
 var plugins = [
+	require('./plugins/polyfills')({
+		module: '@alexeimyshkouski/espruino',
+		pathname: 'globals'
+	}),
 	['@babel/plugin-proposal-object-rest-spread', {
 		// useBuiltIns: true,
 		// loose: true
@@ -22,8 +26,9 @@ var plugins = [
 		alias: {
 			'buffer-from': '@alexeimyshkouski/espruino/modules/buffer-from',
 			events: '@alexeimyshkouski/espruino/modules/events',
+			extend: '@alexeimyshkouski/espruino/modules/extend',
 			stream: '@alexeimyshkouski/espruino/modules/stream',
-			util: '@alexeimyshkouski/espruino/util'
+			util: '@alexeimyshkouski/espruino/modules/util'
 		}
 	}],
 	['module:fast-async', {
