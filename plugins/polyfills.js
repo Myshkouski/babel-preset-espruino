@@ -1,3 +1,5 @@
+const { addDefault } = require('@babel/helper-module-imports')
+
 module.exports = (options = {}) => {
     const path = require('path')
     const fs = require('fs')
@@ -18,10 +20,8 @@ module.exports = (options = {}) => {
                 Program(p) {
                     Object.values(p.scope.globals).forEach(node => {
                         if (availableShims.has(node.name)) {
-                            const importFrom = path.join(moduleName, pathname, node.name).replace(new RegExp('\\' + path.sep, 'g'), '/')
-                            const importLiteral = types.stringLiteral(importFrom)
-                            const importDeclaration = types.importDeclaration([], importLiteral)
-                            p.unshiftContainer('body', importDeclaration)
+                            const source = path.join(moduleName, pathname, node.name).replace(new RegExp('\\' + path.sep, 'g'), '/')
+                            addDefault(p, source)
                         }
                     })
                 }

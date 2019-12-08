@@ -22,6 +22,9 @@ var plugins = [
 	'@babel/plugin-transform-parameters',
 	'@babel/plugin-transform-shorthand-properties',
 	'@babel/plugin-transform-template-literals',
+	['@babel/plugin-proposal-class-properties', { loose: true }],
+	['@babel/plugin-transform-classes', { loose: true }],
+	require('./plugins/hoist-functions')(),
 	['module-resolver', {
 		alias: {
 			'buffer-from': '@alexeimyshkouski/espruino/modules/buffer-from',

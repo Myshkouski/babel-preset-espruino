@@ -2,10 +2,14 @@
 	"dependencies": {
 		"@alexeimyshkouski/espruino": "github:Myshkouski/espruino#wip",
 		"@babel/core": "^7.7.4",
+		"@babel/helper-hoist-variables": "^7.7.4",
+		"@babel/helper-module-imports": "^7.7.4",
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
 		"@babel/plugin-proposal-object-rest-spread": "^7.2.0",
 		"@babel/plugin-transform-arrow-functions": "^7.2.0",
 		"@babel/plugin-transform-block-scoped-functions": "^7.2.0",
 		"@babel/plugin-transform-block-scoping": "^7.2.0",
+		"@babel/plugin-transform-classes": "^7.7.4",
 		"@babel/plugin-transform-destructuring": "^7.2.0",
 		"@babel/plugin-transform-parameters": "^7.2.0",
 		"@babel/plugin-transform-runtime": "^7.2.0",
@@ -13,6 +17,7 @@
 		"@babel/plugin-transform-spread": "^7.2.2",
 		"@babel/plugin-transform-template-literals": "^7.2.0",
 		"babel-plugin-module-resolver": "^3.2.0",
+		"babel-plugin-transform-hoist-loose-functions": "^0.1.6",
 		"fast-async": "^6.3.8"
 	},
 	"name": "babel-preset-espruino",
