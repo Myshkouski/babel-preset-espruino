@@ -1,4 +1,4 @@
-const { addDefault } = require('@babel/helper-module-imports')
+const { addSideEffect } = require('@babel/helper-module-imports')
 
 module.exports = (options = {}) => {
     const path = require('path')
@@ -21,7 +21,7 @@ module.exports = (options = {}) => {
                     Object.values(p.scope.globals).forEach(node => {
                         if (availableShims.has(node.name)) {
                             const source = path.join(moduleName, pathname, node.name).replace(new RegExp('\\' + path.sep, 'g'), '/')
-                            addDefault(p, source)
+                            addSideEffect(p, source)
                         }
                     })
                 }
