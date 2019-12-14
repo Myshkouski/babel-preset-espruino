@@ -14,14 +14,17 @@ module.exports = (options = {}) => {
     const modules = fs.readdirSync(path.join(moduleDir, pathname)).map(pathname => path.parse(pathname).name)
     const availableShims = new Set(modules)
 
-    return ({ types }) => {
+    return () => {
+        const imported = new Set()
+        
         return {
             visitor: {
                 Program(p) {
                     Object.values(p.scope.globals).forEach(node => {
-                        if (availableShims.has(node.name)) {
+                        if (availableShims.has(node.name) && !imported.has(node.name)) {
                             const source = path.join(moduleName, pathname, node.name).replace(new RegExp('\\' + path.sep, 'g'), '/')
                             addSideEffect(p, source)
+                            imported.add(node.name)
                         }
                     })
                 }

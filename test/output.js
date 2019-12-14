@@ -1,4 +1,4 @@
-import _default from "@alexeimyshkouski/espruino/globals/console";
+import "@alexeimyshkouski/espruino/globals/console";
 
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
 
